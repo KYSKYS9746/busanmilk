@@ -1,0 +1,23 @@
+.title span {
+    font-size: 24px;
+    
+    color: #fff;
+}
+
+.title h2 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.title p {
+    font-size: 15px;
+    
+    color: #fff;
+}
+
+.default {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}

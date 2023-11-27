@@ -1,0 +1,72 @@
+.Header_wrap {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    line-height: 80px;
+}
+
+
+
+.Header_wrap .Gnb {
+    margin: 0 0 0 300px;
+    
+}
+
+.Header_wrap .Gnb>ul {
+    display: flex;
+    gap: 30px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.Header_wrap .Util {
+    display: inline-block;
+    margin: 0 0 0 auto;
+
+}
+
+.Header_wrap h1 {
+    font-size: 0;
+}
+
+.MainVisual .MainSlide .itm {
+    position: relative;
+    height: 900px;
+}
+
+.MainVisual .MainSlide .itm {
+    background: url(../images/MainVisual.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .title {
+    position: absolute;
+    z-index: 999;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+
+}
+
+.MainVisual .title span {
+    display: block;
+    margin: 0 0 12px 0;
+    text-align: center;
+}
+
+.MainVisual .title h2 {
+    display: block;
+    margin: 0 0 36px 0;
+    text-align: center;
+}
+
+.MainVisual .title p {
+    display: block;
+    text-align: center;
+    line-height: 20px;
+}
+
+.MainContent {
+    display: flex;
+    
+}
