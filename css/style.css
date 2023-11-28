@@ -1,3 +1,7 @@
+* {
+    outline: 1px solid tomato;
+}
+
 .Header_wrap {
     display: flex;
     max-width: 1200px;
@@ -6,6 +10,21 @@
     line-height: 80px;
 }
 
+.MainVisual .title span {
+    font-size: 24px;
+    color: #fff;
+}
+
+.MainVisual .title h2 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.MainVisual .title p {
+    font-size: 15px;
+    color: #fff;
+}
 
 
 .Header_wrap .Gnb {
@@ -68,5 +87,104 @@
 
 .MainContent {
     display: flex;
-    
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 15px;
+
+}
+
+.MainContent .MainCont h2 {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 24px 0;
+    text-align: center;
+}
+
+
+
+.MainContent .MainCont .img_box{
+    overflow: hidden;
+}
+
+.MainContent .MainCont .img_box img {
+    width: 585px;
+    object-fit: cover;
+}
+
+
+.MainContent .MainCont .order {
+    text-align: center;
+}
+
+.MainContent .MainCont a {
+    display: inline-block;
+    border: 1px solid #e60013;
+    padding: 12px;
+    background: #e60013;
+    color: #fff;
+}
+
+.left {
+    width: 50%;
+    background: #fff;
+}
+.right {
+    width: 50%;
+    background: #dfdfdf;
+}
+
+.MainStory {
+    position: relative;
+    height: 600px;
+    background: url(../images/MainStory.jpg);
+}
+
+.MainStory .title {
+    text-align: center;
+}
+
+.MainStory .title h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+}
+
+.MainStory .title span {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 0 8px 0; 
+}
+
+.MainStory .MainStoryContent {
+    display: flex;
+    gap: 30px;
+}
+
+.MainStory .MainStoryContent>* {
+    flex:1;
+    background: #fff;
+    padding: 50px;
+}
+
+
+.MainStory .inner {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    max-width: 1200px;
+    width: 100%;
+}
+
+.MainStory h3 {
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.MainStory .util {
+    font-size: 60px;
+    text-align: right;
+    color: #e60013;
 }
