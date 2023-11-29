@@ -1,6 +1,6 @@
-* {
+/* * {
     outline: 1px solid tomato;
-}
+} */
 
 .Header_wrap {
     display: flex;
@@ -39,11 +39,15 @@
     font-size: 20px;
 }
 
-.Header_wrap .Util {
+.Header_wrap .Util i {
     display: inline-block;
-    margin: 0 0 0 auto;
-
 }
+
+
+.Header_wrap .Util {
+    margin: 0 0 0 auto;
+}
+
 
 .Header_wrap h1 {
     font-size: 0;
@@ -136,24 +140,9 @@
 .MainStory {
     position: relative;
     height: 600px;
-    background: url(../images/MainStory.jpg);
+    background: url(../images/MainStory.jpg)no-repeat fixed center center/cover;
 }
 
-.MainStory .title {
-    text-align: center;
-}
-
-.MainStory .title h2 {
-    font-size: 30px;
-    font-weight: 700;
-    margin: 0 0 16px 0;
-}
-
-.MainStory .title span {
-    display: inline-block;
-    font-size: 18px;
-    margin: 0 0 8px 0; 
-}
 
 .MainStory .MainStoryContent {
     display: flex;
@@ -177,14 +166,103 @@
     width: 100%;
 }
 
+
 .MainStory h3 {
     font-size: 20px;
     font-weight: 600;
+    margin: 0 0 12px 0;
 
+}
+
+.MainStory p {
+    line-height: 20px;
 }
 
 .MainStory .util {
     font-size: 60px;
     text-align: right;
     color: #e60013;
+    
 }
+
+.MainNews {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.MainNews .MainNewsContent {
+    display: flex;
+    gap: 30px;
+} 
+
+.MainNews .MainNewsContent>* {
+    flex: 1;
+    overflow: hidden;
+    background: #f9f9f9;
+    padding: 0 0 80px 0;
+}
+
+.MainNews .MainNewsContent .mnc .img_mnc {
+    margin: 0 0 24px 0;
+}
+
+.MainNews .MainNewsContent .mnc h3 {
+    display: inline-block;
+    background: #e60013;
+    font-size: 12px;
+    color: #fff;
+    padding: 8px;
+    margin: 0 0 16px 12px;
+}
+
+.MainNews .MainNewsContent .mnc strong {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 12px;
+    margin: 0 0 24px 0;
+}
+
+.MainNews .MainNewsContent .mnc span {
+    display: block;
+    font-size: 16px;
+    padding: 0 12px;
+    margin: 0 0 120px 0;
+    color: #acb6bd;
+}
+
+.MainNews .MainNewsContent .mnc .link {
+    text-align: center;
+}
+
+.MainNews .MainNewsContent .mnc a {
+    display: inline-block;
+    border: 1px solid #e60013;
+    color: #e60013;
+    padding: 12px 24px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.MainNews .MainNewsContent .mnc a:hover {
+    transition: calc(1);
+    background: #e60013;
+    color: #fff;
+}
+
+.Footer {
+    background: #9b0000;
+}
+
+.Footer .inner {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.Footer .inner .footermid>ul {
+    display: flex;
+    gap: 30px;
+}
+
