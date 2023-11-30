@@ -2,21 +2,30 @@
     padding: 100px 0;
 }
 
-.title {
+.inner {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
+}
+
+.default .title {
+    max-width: 1200px;
+    margin: 0 auto 32px auto;
     padding: 0 15px;
     text-align: center;
 }
 
+.default .title span {
+    font-size: 18px;
+    margin: 0 0 2px 0;
 
-.title h2 {
+}
+
+.default .title h2 {
     font-size: 30px;
     font-weight: 700;
-    margin: 0 0 30px 0;
-    
+    margin: 14px 0 0 0;
 }
-.title span {
-    font-size: 18px;
-    margin: 0 0 30px 0;
-}
+
+
+

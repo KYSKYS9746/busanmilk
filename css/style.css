@@ -1,49 +1,119 @@
-/* * {
-    outline: 1px solid tomato;
-} */
+* {
+    outline: 1px solid tomato--;
+}
+
+.Header {
+    position: sticky;
+    top: 0;
+    line-height: 80px;
+    z-index: 999;
+    transition: 0.5s;
+    border-bottom: 1px solid transparent;
+}
+
+.Header:hover {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.Header.on {
+    line-height: 80px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
 
 .Header_wrap {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    line-height: 80px;
 }
 
 .Header_wrap .Gnb {
-    margin: 0 0 0 300px;
+    margin: 0 0 0 189px;
+    
 }
 
 .Header_wrap .Gnb>ul {
     display: flex;
-    gap: 30px;
+    gap: 40.5px;
     font-weight: 600;
     font-size: 20px;
 }
 
-.Header_wrap .Util i {
-    display: inline-block;
+.Header_wrap .Gnb>ul>li {
+    position: relative;
 }
 
+.Header_wrap .Gnb>ul>li .sub {
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transition: 0.5s;
+    height:0;
+    overflow: hidden;
+    line-height: 40px;
+    transform: translate(-50% , 0);
+    z-index: 999;
+
+    white-space: nowrap;
+    font-size: 16px;
+}
+
+.Header_wrap .Gnb:hover>ul>li .sub {
+    height: 200px;
+}
+
+.Header .Gnb::after {
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: #fff;
+    z-index: 1;
+
+    transition: 0.5s;
+    height: 0;
+}
+
+.Header .Gnb:hover::after {
+    height: 200px;
+}
 
 .Header_wrap .Util {
+    font-weight: 600;
+    font-size: 20px;
     margin: 0 0 0 auto;
 }
 
+.Header_wrap .Util i {
+    font-weight: 500;
+    margin: 0 8px 0 0;
+}
 
 .Header_wrap h1 {
     font-size: 0;
+    text-shadow: 1px 1px 2px #fff;
+}
+
+.MainVisual .title{
+    text-shadow: 1px 1px 2px #fff;
 }
 
 .MainVisual .title span {
     font-size: 24px;
     color: #fff;
+    text-shadow: 1px 1px 2px #fff;
+    
 }
 
 .MainVisual .title h2 {
     font-size: 48px;
     font-weight: 800;
     color: #fff;
+
 }
 
 
@@ -54,11 +124,49 @@
 
 .MainVisual .MainSlide .itm {
     position: relative;
-    height: 900px;
+    height: 965px;
 }
 
 .MainVisual .MainSlide .itm {
     background: url(../images/MainVisual.jpg) no-repeat center center/cover;
+}
+
+.MainVisual .scroll {
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    font-size: 0;
+    width: 32px;
+    height: 48px;
+    border: 2px solid #e60013;
+    border-radius: 16px;
+}
+
+.MainVisual .scroll:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    width: 4px;
+    height: 10px;
+    background: #e60013;
+    border-radius: 2px;
+
+    animation: wheel 0.5s infinite;
+}
+
+@Keyframes wheel {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        transform: translate(-50%, 25%);
+    }
 }
 
 .MainVisual .title {
@@ -88,58 +196,53 @@
     line-height: 20px;
 }
 
-.MainContent {
+.MainContent .inner {
     display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 100px 15px;
-
 }
 
-.MainContent .MainCont h2 {
+.MainContent .inner>* {
+    flex:1;
+    padding: 40px 0;
+}
+
+.MainContent h2 {
     font-size: 30px;
     font-weight: 700;
-    padding: 24px 0;
     text-align: center;
 }
 
 
 
-.MainContent .MainCont .img_box{
+.MainContent .img_box{
     overflow: hidden;
-}
-
-.MainContent .MainCont .img_box img {
-    width: 585px;
-    object-fit: cover;
-}
-
-
-.MainContent .MainCont .order {
     text-align: center;
 }
 
-.MainContent .MainCont a {
+
+
+.MainContent .order {
+    text-align: center;
+}
+
+.MainContent .order a {
     display: inline-block;
     border: 1px solid #e60013;
     padding: 12px;
+    margin: 0 0 36px 0;
     background: #e60013;
     color: #fff;
 }
 
 .left {
-    width: 50%;
     background: #fff;
 }
 .right {
-    width: 50%;
-    background: #dfdfdf;
+    background: #f9f9f9;
 }
 
 .MainStory {
     position: relative;
-    height: 600px;
-    background: url(../images/MainStory.jpg);
+    background: url(../images/MainStory.jpg) no-repeat center center/cover;
 }
 
 
@@ -155,16 +258,6 @@
 }
 
 
-.MainStory .inner {
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-
-    max-width: 1200px;
-    width: 100%;
-}
-
 
 .MainStory h3 {
     font-size: 20px;
@@ -175,6 +268,7 @@
 
 .MainStory p {
     line-height: 20px;
+    margin: 0 0 40px 0;
 }
 
 .MainStory .util {
@@ -182,11 +276,6 @@
     text-align: right;
     color: #e60013;
     
-}
-
-.MainNews {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .MainNews .MainNewsContent {
@@ -198,11 +287,15 @@
     flex: 1;
     overflow: hidden;
     background: #f9f9f9;
-    padding: 0 0 80px 0;
+    padding: 0 0 40px 0;
 }
 
 .MainNews .MainNewsContent .mnc .img_mnc {
     margin: 0 0 24px 0;
+}
+
+.MainNews .MainNewsContent .mnc .img_mnc img {
+    width: 100%;
 }
 
 .MainNews .MainNewsContent .mnc h3 {
@@ -226,12 +319,12 @@
     display: block;
     font-size: 16px;
     padding: 0 12px;
-    margin: 0 0 120px 0;
+    margin: 0 0 40px 0;
     color: #acb6bd;
 }
 
 .MainNews .MainNewsContent .mnc .link {
-    text-align: center;
+    padding: 0 12px;
 }
 
 .MainNews .MainNewsContent .mnc a {
@@ -263,26 +356,29 @@
 .Footer .footertop {
     display: flex;
 
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    
 }
 
 
-.Footer .footertop>ul {
+.Footer .footertop ul {
     display: flex;
+    align-items: center;
     gap: 30px;
     font-size: 16px;
     color: #fff;
     margin: 0 0 24px 0;
+    line-height: 24px;
 }
 
-.Footer .footertop ul>li {
+.Footer .footertop ul li {
     position: relative;
 }
 
-.Footer .footertop ul>li~li::before {
+.Footer .footertop ul li~li::before {
     content: "";
     position: absolute;
-    top: 5px;
+    top: 8px;
     left: -15px;
     width: 1px;
     height: 8px;
@@ -290,18 +386,27 @@
 }
 
 
-.footermain .footertop>ul .important {
+.footermain .footertop ul .important {
     font-weight: 700;
     color: #fff0a4;
 }
 
+.Footer span {
+    margin: 0 24px 0 0;
+}
 
-.Footer .footermid>ul>li {
+.Footer .footermid ul {
+    margin: 0 0 16px 0;
+}
+
+.Footer .footermid ul li {
     display: inline-block;
     font-size: 16px;
     color: #fff;
-    margin: 0 30px 30px 0;
+    margin: 0 20px 12px 0;
 }
+
+
 
 .Footer .footerbottom a i {
     padding: 8px;
@@ -310,6 +415,5 @@
     color: #9b0000;
     font-size: 20px;
     margin: 0 16px 0 0;
-
 
 }
