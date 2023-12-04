@@ -31,7 +31,7 @@
 
 .Header_wrap .Gnb {
     margin: 0 0 0 189px;
-    
+
 }
 
 .Header_wrap .Gnb>ul {
@@ -50,10 +50,10 @@
     left: 50%;
     top: 60px;
     transition: 0.5s;
-    height:0;
+    height: 0;
     overflow: hidden;
     line-height: 40px;
-    transform: translate(-50% , 0);
+    transform: translate(-50%, 0);
     z-index: 999;
 
     white-space: nowrap;
@@ -98,7 +98,7 @@
     text-shadow: 1px 1px 2px #fff;
 }
 
-.MainVisual .title{
+.MainVisual .title {
     text-shadow: 1px 1px 2px #fff;
 }
 
@@ -106,7 +106,7 @@
     font-size: 24px;
     color: #fff;
     text-shadow: 1px 1px 2px #fff;
-    
+
 }
 
 .MainVisual .title h2 {
@@ -124,7 +124,7 @@
 
 .MainVisual .MainSlide .itm {
     position: relative;
-    height: 965px;
+    height: 990px;
 }
 
 .MainVisual .MainSlide .itm {
@@ -201,7 +201,7 @@
 }
 
 .MainContent .inner>* {
-    flex:1;
+    flex: 1;
     padding: 40px 0;
 }
 
@@ -213,7 +213,7 @@
 
 
 
-.MainContent .img_box{
+.MainContent .img_box {
     overflow: hidden;
     text-align: center;
 }
@@ -236,6 +236,7 @@
 .left {
     background: #fff;
 }
+
 .right {
     background: #f9f9f9;
 }
@@ -252,7 +253,7 @@
 }
 
 .MainStory .MainStoryContent>* {
-    flex:1;
+    flex: 1;
     background: #fff;
     padding: 50px;
 }
@@ -275,13 +276,13 @@
     font-size: 60px;
     text-align: right;
     color: #e60013;
-    
+
 }
 
 .MainNews .MainNewsContent {
     display: flex;
     gap: 30px;
-} 
+}
 
 .MainNews .MainNewsContent>* {
     flex: 1;
@@ -357,7 +358,7 @@
     display: flex;
 
     /* justify-content: space-between; */
-    
+
 }
 
 
